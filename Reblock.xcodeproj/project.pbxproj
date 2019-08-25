@@ -13,6 +13,7 @@
 		7D5FF49C23128FAE004BF881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5FF49B23128FAE004BF881 /* Assets.xcassets */; };
 		7D5FF49F23128FAE004BF881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5FF49E23128FAE004BF881 /* Preview Assets.xcassets */; };
 		7D5FF4A223128FAE004BF881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5FF4A023128FAE004BF881 /* LaunchScreen.storyboard */; };
+		7D5FF4AA2312916A004BF881 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FF4A92312916A004BF881 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7D5FF49E23128FAE004BF881 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7D5FF4A123128FAE004BF881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D5FF4A323128FAE004BF881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5FF4A92312916A004BF881 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7D5FF49423128FAD004BF881 /* Reblock */ = {
 			isa = PBXGroup;
 			children = (
+				7D5FF4A92312916A004BF881 /* Model.swift */,
 				7D5FF49523128FAD004BF881 /* AppDelegate.swift */,
 				7D5FF49723128FAD004BF881 /* SceneDelegate.swift */,
 				7D5FF49923128FAD004BF881 /* ContentView.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				7D5FF49623128FAD004BF881 /* AppDelegate.swift in Sources */,
 				7D5FF49823128FAD004BF881 /* SceneDelegate.swift in Sources */,
+				7D5FF4AA2312916A004BF881 /* Model.swift in Sources */,
 				7D5FF49A23128FAD004BF881 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
