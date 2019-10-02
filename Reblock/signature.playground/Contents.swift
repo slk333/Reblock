@@ -32,4 +32,3 @@ print("the message: " + messageToVerify)
 print("the signature: " + signature.rawRepresentation.base64EncodedString())
 print(correspond ? ("corresponds to the public key: " + publicKey.rawRepresentation.base64EncodedString()) : "the message has not been signed by the public key: " + publicKey.rawRepresentation.base64EncodedString())
 
-

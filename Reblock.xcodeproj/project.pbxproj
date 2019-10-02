@@ -17,7 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D10C64C2340C5A5003EF983 /* Ledger.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ledger.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7D170DE0233E4FD300E60D24 /* signature.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = signature.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7D170DE1233F593F00E60D24 /* Hashing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Hashing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7D28AD8023454F6400D14DC2 /* Symetric Operations.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Symetric Operations.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7D5FF49223128FAD004BF881 /* Reblock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reblock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5FF49523128FAD004BF881 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D5FF49723128FAD004BF881 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		7D5FF4A123128FAE004BF881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D5FF4A323128FAE004BF881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5FF4A92312916A004BF881 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7DF95CB1234550F200E2D76E /* symmetric.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = symmetric.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +70,12 @@
 				7D5FF49B23128FAE004BF881 /* Assets.xcassets */,
 				7D5FF4A023128FAE004BF881 /* LaunchScreen.storyboard */,
 				7D5FF4A323128FAE004BF881 /* Info.plist */,
+				7D28AD8023454F6400D14DC2 /* Symetric Operations.playground */,
 				7D170DE0233E4FD300E60D24 /* signature.playground */,
+				7D170DE1233F593F00E60D24 /* Hashing.playground */,
+				7D10C64C2340C5A5003EF983 /* Ledger.playground */,
 				7D5FF49D23128FAE004BF881 /* Preview Content */,
+				7DF95CB1234550F200E2D76E /* symmetric.playground */,
 			);
 			path = Reblock;
 			sourceTree = "<group>";
