@@ -8,11 +8,20 @@ struct Tabs : View {
         TabView{
             
             
+            
+            Sign()
+                .tabItem{
+                    Text("Sign")
+                    Image(systemName: "signature")
+            }
+            
+            
             Hash()
                 .tabItem{
                     Text("Hash")
                     Image(systemName: "number")
             }
+            
             
             
          

@@ -6,13 +6,15 @@ import CryptoKit
 struct Hash: View {
     @State var input:String = ""
     @State var ouput:String = ""
-    var hash : String{
+    
+    func hashFor(input:String)->String{
         let data = input.data(using: .utf8)!
         let digest = SHA256.hash(data: data)
         let bytes = [UInt8](digest)
         let hexString = bytes.map{String(format:"%02x",$0)}.joined()
         return hexString
     }
+
     
     
     
@@ -20,8 +22,8 @@ struct Hash: View {
         
         NavigationView{
             Form{
-                TextField("Type input..", text: $input){
-                    self.ouput = self.hash
+                TextField("Type input..", text: $input,onEditingChanged:{startEditing in if startEditing{self.ouput = ""}}){
+                    self.ouput = self.hashFor(input: self.input)
                 }
                 Text(ouput)
             }
