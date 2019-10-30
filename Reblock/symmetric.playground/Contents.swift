@@ -24,5 +24,7 @@ let fileData = FileManager.default.contents(atPath: path)!
 fileData.base64EncodedString()
 let sealedBox2 = try! ChaChaPoly.seal(fileData, using: key)
 sealedBox2.ciphertext.base64EncodedString()
+
 let returnedFileData = try! ChaChaPoly.open(sealedBox2, using: key)
+returnedFileData.base64EncodedString()
 let stringreturned = String(data: returnedFileData, encoding: .utf8)

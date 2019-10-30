@@ -4,10 +4,21 @@ import CryptoKit
 
 func hashDigestConformsToRequirement(digest:SHA256.Digest,requirement:String)-> Bool{
    
+    let prefix = digest.prefix { (byte) -> Bool in
+        byte == 0
+    }
+
+    if prefix.isEmpty{
+        return false
+    }
     
-    let string = digest.description.dropFirst(15)
-   // print(string)
-    return string.hasPrefix(requirement)
+    else if prefix.count == 2{
+        return true
+    }
+    else {return false
+    }
+    
+    
     
 }
 
@@ -20,7 +31,7 @@ while done == false{
    // print(nonce)
     let data = String(nonce).data(using: .utf8)!
     let digest = SHA256.hash(data:data)
-    done = hashDigestConformsToRequirement(digest: digest, requirement: "000")
+    done = hashDigestConformsToRequirement(digest: digest, requirement: "00")
     
 }
 print(nonce)
