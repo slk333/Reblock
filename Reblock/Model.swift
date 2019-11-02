@@ -61,7 +61,7 @@ struct Model{
 
 
     // reading the balance by reading in the ledger the value of the transaction that outputs to this address
-    print(myAddress.balance)
+   // print(myAddress.balance)
     
     
     

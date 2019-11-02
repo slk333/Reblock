@@ -16,11 +16,18 @@ struct Tabs : View {
             }
             
             
+            
             Hash()
                 .tabItem{
                     Text("Hash")
                     Image(systemName: "number")
             }
+            
+            Mine()
+                      .tabItem{
+                          Text("Mine")
+                          Image(systemName: "bitcoinsign.square")
+                  }
             
             
             

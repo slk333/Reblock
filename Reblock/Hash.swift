@@ -14,7 +14,7 @@ struct Hash: View {
         let hexString = bytes.map{String(format:"%02x",$0)}.joined()
         return hexString
     }
-
+    
     
     
     
@@ -22,10 +22,23 @@ struct Hash: View {
         
         NavigationView{
             Form{
+                  Section(header:Text("Input")){
                 TextField("Type input..", text: $input,onEditingChanged:{startEditing in if startEditing{self.ouput = ""}}){
                     self.ouput = self.hashFor(input: self.input)
                 }
-                Text(ouput)
+                    
+                }
+                
+                Section(header:Text("Digest")){
+                    
+                    Text(ouput)
+                        .onLongPressGesture {
+                            let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
+                            impactFeedbackgenerator.prepare()
+                            impactFeedbackgenerator.impactOccurred()
+                            UIPasteboard.general.string = self.ouput
+                    }
+                }
             }
             .navigationBarTitle("SHA256 Hash")
         }

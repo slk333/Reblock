@@ -18,7 +18,7 @@ struct Sign: View {
         let messageData = message.data(using: .utf8)!
         guard let eCDSASignature = try? self.privateKey.signature(for: messageData) else{return}
         
-    
+        
         signature = hexStringFrom(data: eCDSASignature)
         
         
@@ -28,26 +28,33 @@ struct Sign: View {
     
     var body: some View {
         
-        Form{
-            
-            Section(header: Text("Private Key")){
-                Text(hexStringFrom(data: privateKey.rawRepresentation))
+        
+        NavigationView{
+            Form{
+                
+                            Section(header: Text("Private Key")){
+                               Text(hexStringFrom(data: privateKey.rawRepresentation))
+                          }
+                
+                
+                Section(header: Text("Public Key")){
+                    Text(publicKey(from: privateKey))
+                }
+                
+                
+                
+                TextField("Your message",text: $message, onEditingChanged:{startEditing in if startEditing{self.signature = ""}}){
+                    self.generateSignature()
+                }
+                
+                Section(header: Text("Curve25519 Signature")){
+                    Text(signature)
+                }
             }
+                
+            .navigationBarTitle("Sign")
             
             
-            Section(header: Text("Public Key")){
-                Text(publicKey(from: privateKey))
-            }
-            
-         
-            
-            TextField("Your message",text: $message, onEditingChanged:{startEditing in if startEditing{self.signature = ""}}){
-                self.generateSignature()
-            }
-            
-            Section(header: Text("Curve25519 Signature")){
-                Text(signature)
-            }
         }
         
         
