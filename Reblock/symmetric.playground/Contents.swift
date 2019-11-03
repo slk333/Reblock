@@ -6,8 +6,10 @@ let data = string.data(using: .utf8)!
 let clearText = data.base64EncodedString()
 
 let key = SymmetricKey(size: .bits256)
+
 let sealedBox = try! ChaChaPoly.seal(data, using: key)
 let encryptedText = sealedBox.ciphertext
+
 encryptedText.base64EncodedString()
 
 let returnedData = try! ChaChaPoly.open(sealedBox, using: key)

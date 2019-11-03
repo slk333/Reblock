@@ -25,6 +25,7 @@
 		7D10C64C2340C5A5003EF983 /* Ledger.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ledger.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7D170DE0233E4FD300E60D24 /* signature.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = signature.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7D170DE1233F593F00E60D24 /* Hashing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Hashing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7D24110C236EE08200502A02 /* KeyAgreement.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = KeyAgreement.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7D2A6CF32369CD5B00CDF148 /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		7D3695C7236226FE00F13F64 /* Puzzle.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Puzzle.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		7D5FF49223128FAD004BF881 /* Reblock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reblock.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +107,7 @@
 				7D170DE1233F593F00E60D24 /* Hashing.playground */,
 				7D10C64C2340C5A5003EF983 /* Ledger.playground */,
 				7DF95CB1234550F200E2D76E /* symmetric.playground */,
+				7D24110C236EE08200502A02 /* KeyAgreement.playground */,
 				7D5FF49D23128FAE004BF881 /* Preview Content */,
 			);
 			path = Reblock;
