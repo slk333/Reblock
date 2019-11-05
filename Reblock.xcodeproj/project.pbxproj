@@ -15,6 +15,7 @@
 		7D5FF49F23128FAE004BF881 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D5FF49E23128FAE004BF881 /* Preview Assets.xcassets */; };
 		7D5FF4A223128FAE004BF881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D5FF4A023128FAE004BF881 /* LaunchScreen.storyboard */; };
 		7D5FF4AA2312916A004BF881 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5FF4A92312916A004BF881 /* Model.swift */; };
+		7D76B499237216D10017D05E /* Symmetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D76B498237216D10017D05E /* Symmetric.swift */; };
 		7D96008F236C88CA00904C9B /* Mine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96008E236C88CA00904C9B /* Mine.swift */; };
 		7DD7984F2369D38E002BF1BB /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7984E2369D38E002BF1BB /* Tabs.swift */; };
 		7DD798512369EE67002BF1BB /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD798502369EE67002BF1BB /* Sign.swift */; };
@@ -37,6 +38,7 @@
 		7D5FF4A123128FAE004BF881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D5FF4A323128FAE004BF881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D5FF4A92312916A004BF881 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7D76B498237216D10017D05E /* Symmetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symmetric.swift; sourceTree = "<group>"; };
 		7D96008E236C88CA00904C9B /* Mine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mine.swift; sourceTree = "<group>"; };
 		7DD7984E2369D38E002BF1BB /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		7DD798502369EE67002BF1BB /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				7DD798502369EE67002BF1BB /* Sign.swift */,
 				7D2A6CF32369CD5B00CDF148 /* Hash.swift */,
 				7D96008E236C88CA00904C9B /* Mine.swift */,
+				7D76B498237216D10017D05E /* Symmetric.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				7D5FF49823128FAD004BF881 /* SceneDelegate.swift in Sources */,
 				7D5FF4AA2312916A004BF881 /* Model.swift in Sources */,
 				7D5FF49A23128FAD004BF881 /* ContentView.swift in Sources */,
+				7D76B499237216D10017D05E /* Symmetric.swift in Sources */,
 				7DD7984F2369D38E002BF1BB /* Tabs.swift in Sources */,
 				7DD798532369F4C9002BF1BB /* Helper.swift in Sources */,
 			);

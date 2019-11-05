@@ -24,14 +24,18 @@ struct Tabs : View {
             }
             
             Mine()
-                      .tabItem{
-                          Text("Mine")
-                          Image(systemName: "bitcoinsign.square")
-                  }
+                .tabItem{
+                    Text("Mine")
+                    Image(systemName: "bitcoinsign.square")
+            }
+            Symmetric()
+                .tabItem{
+                    Text("Symmetric")
+                    Image(systemName: "arrow.right.arrow.left")
+            }
             
             
             
-         
             
             
             

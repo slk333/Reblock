@@ -6,6 +6,15 @@ let data = string.data(using: .utf8)!
 let clearText = data.base64EncodedString()
 
 let key = SymmetricKey(size: .bits256)
+var bytesBuffer: [UInt8] = []
+key.withUnsafeBytes {bytes in
+    bytesBuffer.append(contentsOf: bytes)
+}
+print(bytesBuffer)
+let key2 = SymmetricKey(data: bytesBuffer)
+
+
+
 
 let sealedBox = try! ChaChaPoly.seal(data, using: key)
 let encryptedText = sealedBox.ciphertext
