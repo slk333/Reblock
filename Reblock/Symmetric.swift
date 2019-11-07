@@ -16,10 +16,15 @@ struct Symmetric: View {
     @State var receivedSealedBoxBase64 = ""
     @State var createdSealedBoxBase64 = ""
     
-    let key = SymmetricKey(size:.bits256)
+    var key : SymmetricKey?{
+        guard let keyData = Data(hexString: receivedDecryptionKey) else {return nil}
+        let key = SymmetricKey(data: keyData)
+        return key
+    }
     
-    var keyAsHex : String {
+    var keyAsHex : String? {
         var bytesBuffer: [UInt8] = []
+        guard let key = key else{return nil}
         key.withUnsafeBytes {bytes in
             bytesBuffer.append(contentsOf: bytes)
         }
@@ -28,6 +33,7 @@ struct Symmetric: View {
     
     func createSealedBoxBase64()-> String {
         let data = input.data(using: .utf8)!
+        guard let key = key else {return ""}
         let sealedBox = try! ChaChaPoly.seal(data, using: key)
         let encryptedText = sealedBox.combined
         let cipherAsBase64 = encryptedText.base64EncodedString()
@@ -40,8 +46,8 @@ struct Symmetric: View {
         guard let sealedBoxData = Data(base64Encoded: receivedSealedBoxBase64) else {return ""}
         guard let sealedBox = try?
             ChaChaPoly.SealedBox(combined: sealedBoxData) else{return ""}
-        guard let keyData = Data(hexString: receivedDecryptionKey) else {return ""}
-        let key = SymmetricKey(data: keyData)
+        
+        guard let key = key else {return ""}
         guard let returnedData = try? ChaChaPoly.open(sealedBox, using: key) else{return ""}
         let returnedString = String(data: returnedData, encoding: .utf8)!
         return returnedString
@@ -66,6 +72,17 @@ struct Symmetric: View {
             
             Form{
                 
+                
+                Section(header:Text("Symmetric Key - 256")){
+                    TextField("Paste Symmetric Key",text:$receivedDecryptionKey)
+                    
+                    
+                }
+                
+                
+                
+                
+                
                 Section(header:Text("Mode")){
                     
                     Picker("Mode:",selection:$isEncrypting){
@@ -83,32 +100,21 @@ struct Symmetric: View {
                 
                 if isEncrypting{
                     
-                    Section(header:Text("Symmetric Key - 256")){
-                        Text(keyAsHex)
-                            .onTapGesture {
-                                UIPasteboard.general.string = self.keyAsHex
-                        }
-                        
-                    }
+                    
                     Section(header:Text("Input")){
                         TextField("Type input..", text: $input){
                             self.createdSealedBoxBase64 = self.createSealedBoxBase64()
                         }
                     }
                     
-                    Section(header:Text("Sealed Box")){
-                        Text(createdSealedBoxBase64)
-                            .onTapGesture {
-                                UIPasteboard.general.string = self.createdSealedBoxBase64
-                        }
+                    Section(
+                        header:Text("Sealed Box"),
+                        footer:CopyButton(stringToCopy: self.createdSealedBoxBase64)){
+                                        Text(createdSealedBoxBase64)
+                                        
                     }
                 }
                 else{
-                    
-                    Section(header:Text("Symmetric Key - 256")){
-                        TextField("Type key..", text: $receivedDecryptionKey)
-                        
-                    }
                     
                     Section(header:Text("Sealed Box")){
                         TextField("Paste SealedBox", text: $receivedSealedBoxBase64)
