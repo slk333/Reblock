@@ -28,11 +28,25 @@ struct Tabs : View {
                     Text("Mine")
                     Image(systemName: "bitcoinsign.square")
             }
+            
+            
+            
+            
+            KeyAgreement()
+                .tabItem{
+                    Text("Key Agreement")
+                    Image(systemName: "arrow.merge")
+            }
+            
+            
+            
+            
             Symmetric()
                 .tabItem{
                     Text("Symmetric")
                     Image(systemName: "arrow.right.arrow.left")
             }
+            
             
             
             

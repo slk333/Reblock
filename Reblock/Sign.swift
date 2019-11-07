@@ -32,13 +32,16 @@ struct Sign: View {
         NavigationView{
             Form{
                 
-                            Section(header: Text("Private Key")){
-                               Text(hexStringFrom(data: privateKey.rawRepresentation))
-                          }
+                Section(header: Text("Private Key")){
+                    Text(hexStringFrom(data: privateKey.rawRepresentation))
+                }
                 
                 
                 Section(header: Text("Public Key")){
                     Text(publicKey(from: privateKey))
+                        .onTapGesture {
+                            UIPasteboard.general.string = self.publicKey(from: self.privateKey)
+                    }
                 }
                 
                 
