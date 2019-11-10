@@ -62,6 +62,8 @@
 		7D2A6CF12369CCD600CDF148 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7D5FF4A92312916A004BF881 /* Model.swift */,
+				7D5FF4A323128FAE004BF881 /* Info.plist */,
 				7DD798522369F4C9002BF1BB /* Helper.swift */,
 				7D5FF49523128FAD004BF881 /* AppDelegate.swift */,
 				7D5FF49723128FAD004BF881 /* SceneDelegate.swift */,
@@ -106,14 +108,7 @@
 			children = (
 				7D2A6CF22369CCEC00CDF148 /* Views */,
 				7D2A6CF12369CCD600CDF148 /* App */,
-				7D5FF4A92312916A004BF881 /* Model.swift */,
-				7D5FF4A323128FAE004BF881 /* Info.plist */,
-				7D3695C7236226FE00F13F64 /* Puzzle.playground */,
-				7D170DE0233E4FD300E60D24 /* signature.playground */,
-				7D170DE1233F593F00E60D24 /* Hashing.playground */,
-				7D10C64C2340C5A5003EF983 /* Ledger.playground */,
-				7DF95CB1234550F200E2D76E /* symmetric.playground */,
-				7D24110C236EE08200502A02 /* KeyAgreement.playground */,
+				7D60517E23787ACD0005AA61 /* Playgrounds */,
 				7D5FF49D23128FAE004BF881 /* Preview Content */,
 			);
 			path = Reblock;
@@ -125,6 +120,19 @@
 				7D5FF49E23128FAE004BF881 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D60517E23787ACD0005AA61 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				7D3695C7236226FE00F13F64 /* Puzzle.playground */,
+				7D170DE0233E4FD300E60D24 /* signature.playground */,
+				7D170DE1233F593F00E60D24 /* Hashing.playground */,
+				7D10C64C2340C5A5003EF983 /* Ledger.playground */,
+				7DF95CB1234550F200E2D76E /* symmetric.playground */,
+				7D24110C236EE08200502A02 /* KeyAgreement.playground */,
+			);
+			name = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
